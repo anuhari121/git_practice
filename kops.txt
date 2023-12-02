@@ -1,0 +1,9 @@
+kops create cluster \
+--state=${KOPS_STATE_STORE} \
+--node-count=2 \
+--master-size=t3a.large \
+--node-size=t3a.large \
+--zones=us-west-1a \
+--name=${KOPS_CLUSTER_NAME} \
+--dns private \
+--master-count 1
